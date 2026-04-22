@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "name": "yoga-by-luna-clone",
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/classes",
+      "dest": "/classes.html"
+    },
+    {
+      "src": "/about",
+      "dest": "/about.html"
+    },
+    {
+      "src": "/blog",
+      "dest": "/blog.html"
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
