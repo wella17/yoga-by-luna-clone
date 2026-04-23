@@ -1,28 +1,20 @@
 {
-  "version": 2,
-  "name": "yoga-by-luna-clone",
-  "builds": [
+  "rewrites": [
     {
-      "src": "*.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/index.html"
+      "source": "/classes",
+      "destination": "/classes.html"
     },
     {
-      "src": "/classes",
-      "dest": "/classes.html"
+      "source": "/about",
+      "destination": "/about.html"
     },
     {
-      "src": "/about",
-      "dest": "/about.html"
+      "source": "/blog",
+      "destination": "/blog.html"
     },
     {
-      "src": "/blog",
-      "dest": "/blog.html"
+      "source": "/cart",
+      "destination": "/cart.html"
     }
   ],
   "cleanUrls": true,
