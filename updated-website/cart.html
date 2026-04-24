@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Yoga by Luna</title>
+    <meta name="description" content="Complete your yoga journey purchase. Secure online payment and Zelle options available.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Courgette:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="site-branding">
+                    <h1 class="site-title">
+                        <a href="/" rel="home">Yoga by Luna</a>
+                    </h1>
+                    <p class="site-description">Daily Mantra with Gaby</p>
+                </div>
+
+                <nav class="main-navigation">
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                        <span class="screen-reader-text">Primary Menu</span>
+                        <span class="menu-icon"></span>
+                    </button>
+                    <ul id="primary-menu" class="menu">
+                        <li class="menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="classes.html">Classes</a></li>
+                        <li class="menu-item"><a href="about.html">About your teachers</a></li>
+                        <li class="menu-item"><a href="blog.html">Lunar Blog</a></li>
+                        <li class="menu-item"><a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="site-main">
+        <div class="container">
+            <section class="page-header">
+                <h1>Shopping Cart</h1>
+                <p>Complete your yoga journey purchase</p>
+            </section>
+
+            <div class="cart-container">
+                <div class="cart-items" id="cart-items">
+                    <!-- Cart items will be populated by JavaScript -->
+                </div>
+
+                <div class="cart-empty" id="cart-empty" style="display: none;">
+                    <h3>Your cart is empty</h3>
+                    <p>Add some classes or programs to get started on your yoga journey.</p>
+                    <a href="classes.html" class="btn btn-primary">Browse Classes</a>
+                </div>
+
+                <div class="cart-summary" id="cart-summary">
+                    <div class="summary-section">
+                        <h3>Order Summary</h3>
+                        <div class="summary-line">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Processing Fee:</span>
+                            <span id="processing-fee">$0.00</span>
+                        </div>
+                        <div class="summary-line total">
+                            <span><strong>Total:</strong></span>
+                            <span id="total"><strong>$0.00</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="payment-options">
+                        <h3>Payment Options</h3>
+
+                        <div class="payment-method" id="credit-card-option">
+                            <input type="radio" id="payment-card" name="payment-method" value="card" checked>
+                            <label for="payment-card">
+                                <span class="payment-icon">💳</span>
+                                Credit/Debit Card
+                            </label>
+                            <div class="payment-description">Secure online payment via Stripe</div>
+                        </div>
+
+                        <div class="payment-method" id="paypal-option">
+                            <input type="radio" id="payment-paypal" name="payment-method" value="paypal">
+                            <label for="payment-paypal">
+                                <span class="payment-icon">🅿️</span>
+                                PayPal
+                            </label>
+                            <div class="payment-description">Pay securely with your PayPal account</div>
+                        </div>
+
+                        <div class="payment-method" id="zelle-option">
+                            <input type="radio" id="payment-zelle" name="payment-method" value="zelle">
+                            <label for="payment-zelle">
+                                <span class="payment-icon">⚡</span>
+                                Zelle
+                            </label>
+                            <div class="payment-description">
+                                Direct bank transfer via Zelle<br>
+                                <small>Send payment to: <strong>luna@yogabyluna.com</strong></small>
+                            </div>
+                        </div>
+
+                        <div class="payment-method" id="venmo-option">
+                            <input type="radio" id="payment-venmo" name="payment-method" value="venmo">
+                            <label for="payment-venmo">
+                                <span class="payment-icon">💸</span>
+                                Venmo
+                            </label>
+                            <div class="payment-description">
+                                Quick payment via Venmo<br>
+                                <small>Send payment to: <strong>@YogaByLuna</strong></small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="checkout-section">
+                        <button class="btn btn-primary btn-large" id="checkout-btn" disabled>
+                            Proceed to Checkout
+                        </button>
+
+                        <div class="security-notice">
+                            <span class="security-icon">🔒</span>
+                            Your payment information is secure and encrypted
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Forms -->
+            <div class="payment-forms" id="payment-forms" style="display: none;">
+                <!-- Credit Card Form -->
+                <form class="payment-form" id="card-form">
+                    <h3>Credit/Debit Card Payment</h3>
+
+                    <div class="form-group">
+                        <label for="customer-name">Full Name *</label>
+                        <input type="text" id="customer-name" name="customer-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-email">Email Address *</label>
+                        <input type="email" id="customer-email" name="customer-email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card-element">Card Information *</label>
+                        <div id="card-element">
+                            <!-- Stripe Elements will create form elements here -->
+                            <div class="card-placeholder">
+                                <input type="text" placeholder="1234 5678 9012 3456" id="card-number" maxlength="19">
+                                <div class="card-row">
+                                    <input type="text" placeholder="MM/YY" id="card-expiry" maxlength="5">
+                                    <input type="text" placeholder="CVC" id="card-cvc" maxlength="4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large" id="card-submit">
+                        Complete Payment
+                    </button>
+                </form>
+
+                <!-- Zelle Instructions -->
+                <div class="payment-form" id="zelle-form" style="display: none;">
+                    <h3>Zelle Payment Instructions</h3>
+
+                    <div class="zelle-instructions">
+                        <div class="instruction-step">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h4>Open your banking app</h4>
+                                <p>Use your mobile banking app or online banking platform</p>
+                            </div>
+                        </div>
+
+                        <div class="instruction-step">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h4>Select Zelle</h4>
+                                <p>Look for Zelle in your banking app menu</p>
+                            </div>
+                        </div>
+
+                        <div class="instruction-step">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h4>Send payment to:</h4>
+                                <div class="payment-details">
+                                    <div class="detail-item">
+                                        <strong>Email:</strong> luna@yogabyluna.com
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Amount:</strong> <span id="zelle-amount">$0.00</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Message:</strong> "Yoga by Luna - [Your Name]"
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="instruction-step">
+                            <span class="step-number">4</span>
+                            <div class="step-content">
+                                <h4>Confirm your order</h4>
+                                <p>Click the button below to confirm your Zelle payment</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="zelle-confirm-form">
+                        <div class="form-group">
+                            <label for="zelle-name">Your Full Name *</label>
+                            <input type="text" id="zelle-name" name="zelle-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zelle-email">Your Email Address *</label>
+                            <input type="email" id="zelle-email" name="zelle-email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zelle-phone">Phone Number *</label>
+                            <input type="tel" id="zelle-phone" name="zelle-phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="zelle-confirm" required>
+                                I confirm that I have sent the Zelle payment
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">
+                            Confirm Zelle Payment
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Venmo Instructions -->
+                <div class="payment-form" id="venmo-form" style="display: none;">
+                    <h3>Venmo Payment Instructions</h3>
+
+                    <div class="venmo-instructions">
+                        <div class="instruction-step">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h4>Open Venmo app</h4>
+                                <p>Launch the Venmo mobile app on your phone</p>
+                            </div>
+                        </div>
+
+                        <div class="instruction-step">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h4>Search for: @YogaByLuna</h4>
+                                <p>Use the search function to find our Venmo account</p>
+                            </div>
+                        </div>
+
+                        <div class="instruction-step">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h4>Send payment</h4>
+                                <div class="payment-details">
+                                    <div class="detail-item">
+                                        <strong>Amount:</strong> <span id="venmo-amount">$0.00</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Note:</strong> "Yoga classes - [Your Name]"
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="venmo-confirm-form">
+                        <div class="form-group">
+                            <label for="venmo-name">Your Full Name *</label>
+                            <input type="text" id="venmo-name" name="venmo-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="venmo-email">Your Email Address *</label>
+                            <input type="email" id="venmo-email" name="venmo-email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="venmo-username">Your Venmo Username *</label>
+                            <input type="text" id="venmo-username" name="venmo-username" required placeholder="@yourusername">
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="venmo-confirm" required>
+                                I confirm that I have sent the Venmo payment
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">
+                            Confirm Venmo Payment
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="success-message" style="display: none;">
+                <div class="success-content">
+                    <span class="success-icon">✅</span>
+                    <h3>Order Confirmed!</h3>
+                    <p>Thank you for your purchase. Luna will contact you within 24 hours to schedule your sessions.</p>
+                    <div class="success-details">
+                        <p><strong>Order ID:</strong> <span id="order-id"></span></p>
+                        <p><strong>Confirmation email</strong> will be sent to your email address.</p>
+                    </div>
+                    <a href="index.html" class="btn btn-primary">Return Home</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Yoga by Luna. All rights reserved.</p>
+                <p>Powered by Nirvata WordPress Theme</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
