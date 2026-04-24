@@ -1,12 +1,16 @@
 {
   "name": "yoga-by-luna-clone",
   "version": "1.0.0",
-  "description": "A faithful recreation of the Daily Mantra with Gaby yoga website, rebuilt as a modern static site.",
-  "main": "index.js",
+  "description": "Professional Yoga by Luna website - Static HTML",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo 'No build needed - static site'",
+    "start": "echo 'Static HTML site ready'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": ["yoga", "static-site", "html"],
+  "author": "Wella",
+  "license": "MIT"
 }
