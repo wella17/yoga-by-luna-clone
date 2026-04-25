@@ -614,6 +614,69 @@ button:focus, .button:focus, input[type="submit"]:focus,
     }
 }
 
+/* ENHANCED TEXT READABILITY FOR TEACHER & BLOG CONTENT */
+.teacher-profile, .teacher-info, .teacher-photo,
+.blog-post, .post-content, .post-meta,
+.qualifications, .specializations, .specialization,
+blockquote, .page-header {
+    color: #FFFFFF !important;
+    text-shadow:
+        2px 2px 0px rgba(0, 0, 0, 1),
+        3px 3px 6px rgba(0, 0, 0, 0.95),
+        0px 0px 15px rgba(0, 0, 0, 0.8),
+        1px 1px 3px rgba(0, 0, 0, 1) !important;
+}
+
+.teacher-info p, .teacher-info li,
+.blog-post p, .blog-post li,
+.post-content p, .post-content li,
+.qualifications li, .specialization p {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    text-shadow:
+        2px 2px 0px rgba(0, 0, 0, 1),
+        3px 3px 6px rgba(0, 0, 0, 0.95),
+        0px 0px 15px rgba(0, 0, 0, 0.8),
+        1px 1px 3px rgba(0, 0, 0, 1) !important;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.teacher-subtitle, .post-meta, .post-date {
+    color: #FFD700 !important;
+    font-weight: 600 !important;
+    text-shadow:
+        2px 2px 0px rgba(0, 0, 0, 1),
+        0px 0px 12px rgba(0, 0, 0, 0.9),
+        1px 1px 3px rgba(0, 0, 0, 1) !important;
+}
+
+blockquote p {
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-left: 4px solid #FFD700;
+    padding: 15px 20px !important;
+    margin: 15px 0 !important;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+}
+
+.qualifications ul, .specializations {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.qualifications h4, .specialization h4 {
+    color: #FFD700 !important;
+    text-shadow:
+        2px 2px 0px rgba(0, 0, 0, 1),
+        0px 0px 12px rgba(0, 0, 0, 0.9) !important;
+    margin-bottom: 15px;
+}
+
 /* MOBILE-SPECIFIC ENHANCEMENTS */
 /* Smooth scrolling for mobile */
 html {
