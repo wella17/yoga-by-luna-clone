@@ -220,15 +220,12 @@ a:hover {
     display: flex;
     border-radius: 30px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(25px);
-    border: 3px solid rgba(255, 255, 255, 0.7);
+    background: rgba(248, 246, 240, 0.95);
+    backdrop-filter: blur(15px) saturate(1.1);
+    border: 2px solid rgba(201, 170, 136, 0.4);
     text-decoration: none;
-    color: #FFFFFF !important;
-    text-shadow:
-        3px 3px 0px rgba(0, 0, 0, 1),
-        0px 0px 15px rgba(0, 0, 0, 0.9),
-        1px 1px 3px rgba(0, 0, 0, 1);
+    color: #2C4A3A !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
     position: relative;
     overflow: hidden;
     min-height: 48px;
@@ -236,25 +233,22 @@ a:hover {
     justify-content: center;
     letter-spacing: 0.5px;
     box-shadow:
-        0 8px 30px rgba(0, 0, 0, 0.4),
-        0 4px 15px rgba(0, 0, 0, 0.2),
-        inset 0 2px 0 rgba(255, 255, 255, 0.1);
+        0 6px 20px rgba(139, 90, 60, 0.08),
+        0 2px 8px rgba(139, 90, 60, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 /* Modern hover effect with lift animation */
 .main-navigation a:hover {
-    background: linear-gradient(135deg, rgba(223, 157, 0, 0.95), rgba(255, 193, 7, 0.95));
+    background: rgba(201, 170, 136, 0.9);
     color: #FFFFFF !important;
-    transform: translateY(-4px) scale(1.05);
+    transform: translateY(-2px) scale(1.02);
     box-shadow:
-        0 12px 40px rgba(223, 157, 0, 0.5),
-        0 6px 20px rgba(0, 0, 0, 0.2),
-        inset 0 2px 0 rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 215, 0, 0.9);
-    text-shadow:
-        2px 2px 0px rgba(0, 0, 0, 1),
-        0px 0px 12px rgba(0, 0, 0, 0.8),
-        1px 1px 3px rgba(0, 0, 0, 1);
+        0 8px 25px rgba(139, 90, 60, 0.15),
+        0 4px 12px rgba(139, 90, 60, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    border-color: rgba(139, 90, 60, 0.6);
+    text-shadow: 0 1px 3px rgba(139, 90, 60, 0.5);
 }
 
 /* Micro-interaction: shimmer effect */
@@ -274,17 +268,14 @@ a:hover {
 }
 
 .main-navigation .current-menu-item a {
-    background: linear-gradient(135deg, rgba(223, 157, 0, 0.95), rgba(255, 193, 7, 0.95));
+    background: rgba(201, 170, 136, 0.8);
     color: #FFFFFF !important;
-    border-color: rgba(255, 215, 0, 0.9);
+    border-color: rgba(139, 90, 60, 0.6);
     box-shadow:
-        0 8px 30px rgba(223, 157, 0, 0.4),
-        0 4px 15px rgba(0, 0, 0, 0.2),
-        inset 0 2px 0 rgba(255, 255, 255, 0.2);
-    text-shadow:
-        2px 2px 0px rgba(0, 0, 0, 1),
-        0px 0px 12px rgba(0, 0, 0, 0.8),
-        1px 1px 3px rgba(0, 0, 0, 1);
+        0 6px 20px rgba(139, 90, 60, 0.12),
+        0 2px 8px rgba(139, 90, 60, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    text-shadow: 0 1px 3px rgba(139, 90, 60, 0.6);
 }
 
 .menu-toggle {
@@ -404,8 +395,15 @@ a:hover {
 .teacher-profile,
 .about-content,
 .blog-content {
-    background: rgba(0, 0, 0, 0.8) !important;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: rgba(248, 246, 240, 0.95) !important;
+    backdrop-filter: blur(15px) saturate(1.1);
+    border: 2px solid rgba(201, 170, 136, 0.3);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow:
+        0 8px 30px rgba(139, 90, 60, 0.06),
+        0 4px 12px rgba(139, 90, 60, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 /* Force all text to be visible */
@@ -818,14 +816,14 @@ html {
     }
 
     .main-navigation ul {
-        background: rgba(0, 0, 0, 0.9);
-        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(248, 246, 240, 0.98);
+        border-color: rgba(201, 170, 136, 0.3);
     }
 
     input, textarea, select {
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        border-color: rgba(255, 255, 255, 0.3);
+        background: rgba(248, 246, 240, 0.9);
+        color: #2C4A3A;
+        border-color: rgba(201, 170, 136, 0.4);
     }
 }
 
@@ -1129,8 +1127,8 @@ html {
             2px 2px 0px rgba(0, 0, 0, 1),
             0px 0px 8px rgba(0, 0, 0, 0.8),
             1px 1px 3px rgba(0, 0, 0, 1);
-        background: rgba(0, 0, 0, 0.8);
-        border: 2px solid rgba(255, 255, 255, 0.3);
+        background: rgba(248, 246, 240, 0.9);
+        border: 2px solid rgba(201, 170, 136, 0.3);
     }
 
     .main-navigation a:hover {
