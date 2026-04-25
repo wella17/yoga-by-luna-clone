@@ -46,9 +46,13 @@ body {
     font-family: 'Inter', 'Noto Sans', sans-serif;
     font-size: 18px;
     line-height: 1.6;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     letter-spacing: 0.3px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    text-shadow:
+        1px 1px 0px rgba(0, 0, 0, 1),
+        2px 2px 4px rgba(0, 0, 0, 0.9),
+        0px 0px 10px rgba(0, 0, 0, 0.7);
     background:
         linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.1)),
         url('https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80&v=2024042401');
@@ -91,26 +95,39 @@ h1, h2, h3, h4, h5, h6 {
         0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* Modern Typography Scale (1.25 ratio) */
+/* Modern Typography Scale - MAXIMUM VISIBILITY */
 h1 {
     font-size: 2.441rem; /* 39px */
-    font-weight: 700;
-    background: linear-gradient(135deg, #df9d00, #ff6b35);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-weight: 900;
+    color: #FFFFFF !important;
+    text-shadow:
+        3px 3px 0px rgba(0, 0, 0, 1),
+        6px 6px 10px rgba(0, 0, 0, 0.8),
+        0px 0px 20px rgba(0, 0, 0, 0.6);
 }
 h2 {
     font-size: 1.953rem; /* 31px */
-    color: #2c3e50;
+    color: #FFFFFF !important;
+    font-weight: 800;
+    text-shadow:
+        2px 2px 0px rgba(0, 0, 0, 1),
+        4px 4px 8px rgba(0, 0, 0, 0.8);
 }
 h3 {
     font-size: 1.563rem; /* 25px */
-    color: #34495e;
+    color: #FFFFFF !important;
+    font-weight: 700;
+    text-shadow:
+        2px 2px 0px rgba(0, 0, 0, 1),
+        4px 4px 6px rgba(0, 0, 0, 0.8);
 }
 h4 {
     font-size: 1.25rem; /* 20px */
-    color: #5d6d7e;
+    color: #FFFFFF !important;
+    font-weight: 700;
+    text-shadow:
+        1px 1px 0px rgba(0, 0, 0, 1),
+        3px 3px 5px rgba(0, 0, 0, 0.8);
 }
 
 a {
@@ -189,22 +206,23 @@ a:hover {
 }
 
 .main-navigation a {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 16px;
-    padding: 16px 28px; /* Bigger tabs - 48px+ height */
-    display: block;
+    padding: 16px 28px;
+    display: flex;
     border-radius: 30px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
-    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     text-decoration: none;
-    color: #FFFFFF;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    color: #FFFFFF !important;
+    text-shadow:
+        2px 2px 0px rgba(0, 0, 0, 1),
+        0px 0px 10px rgba(0, 0, 0, 0.8);
     position: relative;
     overflow: hidden;
-    min-height: 48px; /* WCAG 2.2 compliant */
-    display: flex;
+    min-height: 48px;
     align-items: center;
     justify-content: center;
     letter-spacing: 0.5px;
@@ -334,18 +352,42 @@ a:hover {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* Text readability sections */
+/* MAXIMUM TEXT READABILITY SECTIONS */
 .intro-section,
 .yoga-types,
 .classes-grid,
 .teacher-profile,
 .blog-post {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 15px;
+    background:
+        linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+        rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
     margin: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Special overlay for text-heavy sections */
+.teacher-profile,
+.about-content,
+.blog-content {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Force all text to be visible */
+* {
+    color: #FFFFFF;
+}
+
+p, span, div, li, td, th {
+    color: #FFFFFF !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9) !important;
+    font-weight: 500 !important;
 }
 
 /* Modern button styling for 2026 */
