@@ -446,22 +446,22 @@ a:hover {
 .qualifications { background: #fdf9f7; } /* Dusty rose */
 .specializations { background: #f8fafc; } /* Misty blue */
 
-/* LIGHT PINK DECK DESIGN - COMPACT & BEAUTIFUL */
+/* ENHANCED PINK DECK DESIGN - READABLE & BEAUTIFUL */
 .blog-post {
-    background: rgba(255, 240, 245, 0.9); /* Light pink */
-    border: 1px solid rgba(255, 182, 193, 0.3); /* Soft pink border */
+    background: rgba(255, 182, 193, 0.85); /* More vibrant pink */
+    border: 1px solid rgba(255, 105, 180, 0.4); /* Hot pink border */
     border-radius: 12px;
-    padding: clamp(1.25rem, 3vw, 2rem);
+    padding: clamp(1.25rem, 3vw, 1.8rem);
     margin: clamp(1rem, 3vw, 1.5rem) auto;
-    max-width: 700px; /* Smaller deck size */
+    max-width: 650px; /* Slightly smaller for better proportions */
     position: relative;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow:
-        0 2px 8px rgba(255, 182, 193, 0.15),
-        0 4px 16px rgba(0, 0, 0, 0.06);
+        0 3px 12px rgba(255, 105, 180, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Deck stack effect - subtle shadow behind */
+/* Enhanced deck stack effect */
 .blog-post::before {
     content: '';
     position: absolute;
@@ -469,18 +469,18 @@ a:hover {
     left: 4px;
     right: 4px;
     bottom: -4px;
-    background: rgba(255, 228, 235, 0.6);
+    background: rgba(255, 105, 180, 0.4); /* Deeper pink for stack */
     border-radius: 12px;
     z-index: -1;
-    box-shadow: 0 2px 8px rgba(255, 182, 193, 0.1);
+    box-shadow: 0 3px 12px rgba(255, 105, 180, 0.15);
 }
 
-/* Hover effect for deck */
+/* Enhanced hover effect for deck */
 .blog-post:hover {
     transform: translateY(-3px);
     box-shadow:
-        0 4px 12px rgba(255, 182, 193, 0.2),
-        0 8px 24px rgba(0, 0, 0, 0.08);
+        0 5px 18px rgba(255, 105, 180, 0.25),
+        0 10px 28px rgba(0, 0, 0, 0.1);
 }
 
 .blog-post:hover::before {
@@ -797,14 +797,14 @@ blockquote, .page-header {
     color: #2d7738;
 }
 
-/* MODERN CONTENT TEXT - CLEAN & READABLE */
+/* ENHANCED CONTENT TEXT - READABLE ON PINK */
 .teacher-info p, .teacher-info li,
 .blog-post p, .blog-post li,
 .post-content p, .post-content li,
 .qualifications li, .specialization p {
     color: #1a202c !important;
-    font-weight: 400 !important;
-    text-shadow: none !important;
+    font-weight: 500 !important; /* Medium weight for better readability */
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6) !important; /* Subtle shadow */
     background: none;
     border: none;
     padding: 0;
@@ -1083,32 +1083,37 @@ html {
     padding-left: 20px;
 }
 
-/* PINK DECK TYPOGRAPHY */
+/* ENHANCED PINK DECK TYPOGRAPHY */
 .blog-post h3 {
-    color: #2d3748;
+    color: #1a202c; /* Darker for better contrast */
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+    font-weight: 600; /* Slightly bolder */
+    font-size: clamp(1.3rem, 3.5vw, 1.6rem);
     margin-bottom: 15px;
     line-height: 1.3;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8); /* Subtle white shadow */
 }
 
 .blog-post p {
-    color: #2d3748;
-    line-height: 1.6;
-    font-size: clamp(0.95rem, 2.5vw, 1.05rem);
-    margin-bottom: 15px;
-    max-width: 100%; /* Fit deck width */
+    color: #1a202c; /* Darker for better contrast */
+    line-height: 1.65;
+    font-size: clamp(1rem, 2.5vw, 1.1rem); /* Slightly larger */
+    font-weight: 500; /* Medium weight for readability */
+    margin-bottom: 16px;
+    max-width: 100%;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6); /* Subtle shadow */
 }
 
 .blog-post .post-meta {
-    color: #718096;
-    font-size: clamp(0.85rem, 2vw, 0.9rem);
+    color: #4a5568; /* Darker gray for better readability */
+    font-size: clamp(0.9rem, 2vw, 0.95rem); /* Slightly larger */
+    font-weight: 500; /* Medium weight */
     margin-bottom: 20px;
     font-style: italic;
     display: flex;
     align-items: center;
     gap: 8px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7); /* Subtle shadow */
 }
 
 .blog-post .post-meta::before {
