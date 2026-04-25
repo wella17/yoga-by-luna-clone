@@ -46,8 +46,9 @@ body {
     font-family: 'Inter', 'Noto Sans', sans-serif;
     font-size: 18px;
     line-height: 1.6;
-    color: #2c3e50;
+    color: #FFFFFF;
     letter-spacing: 0.3px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0px 2px 4px rgba(0, 0, 0, 0.3);
     background:
         linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.1)),
         url('https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80&v=2024042401');
@@ -76,15 +77,18 @@ body {
     padding: 0 15px;
 }
 
-/* Modern Typography - 2026 Trends */
+/* Modern Typography - High Visibility */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', 'Courgette', cursive;
-    color: #1a1a1a;
-    font-weight: 600;
+    color: #FFFFFF;
+    font-weight: 700;
     margin: 0 0 1.2em;
     line-height: 1.2;
     letter-spacing: -0.02em;
     text-rendering: optimizeLegibility;
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.9),
+        0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* Modern Typography Scale (1.25 ratio) */
@@ -158,13 +162,16 @@ a:hover {
 }
 
 .site-branding .site-title a {
-    color: #222222;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
 }
 
 .site-description {
     font-size: 14px;
-    color: #555555;
+    color: #E8E8E8;
     margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 /* Navigation */
@@ -192,7 +199,8 @@ a:hover {
     backdrop-filter: blur(15px);
     border: 1.5px solid rgba(255, 255, 255, 0.3);
     text-decoration: none;
-    color: #333;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     position: relative;
     overflow: hidden;
     min-height: 48px; /* WCAG 2.2 compliant */
@@ -315,11 +323,29 @@ a:hover {
     padding: 60px 0;
 }
 
-/* Enhanced visual hierarchy */
+/* Enhanced visual hierarchy with text readability */
 .site-main {
     padding: 80px 0;
     max-width: 1200px;
     margin: 0 auto;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Text readability sections */
+.intro-section,
+.yoga-types,
+.classes-grid,
+.teacher-profile,
+.blog-post {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Modern button styling for 2026 */
@@ -569,22 +595,29 @@ button:focus, .button:focus, input[type="submit"]:focus,
     opacity: 0.8;
 }
 
-/* Modern Class Title */
+/* Modern Class Title - High Visibility */
 .class-item h3 {
     text-align: center;
     margin-bottom: 15px;
     font-size: 1.3em;
-    background: linear-gradient(135deg, #2c3e50, #34495e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.9),
+        0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .class-item p {
     text-align: center;
-    color: #555;
+    color: #F8F8F8;
     line-height: 1.5;
     margin: 15px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.class-duration {
+    color: #E8E8E8 !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
 }
 
 /* About Page Styles */
