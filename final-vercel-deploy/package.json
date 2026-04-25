@@ -1,0 +1,16 @@
+{
+  "name": "yoga-by-luna-clone",
+  "version": "1.0.0",
+  "description": "Professional Yoga by Luna website - Static HTML",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build needed - static site'",
+    "start": "echo 'Static HTML site ready'"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": ["yoga", "static-site", "html"],
+  "author": "Wella",
+  "license": "MIT"
+}
