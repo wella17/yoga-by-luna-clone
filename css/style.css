@@ -55,7 +55,12 @@ body {
         0px 0px 15px rgba(0, 0, 0, 0.8),
         1px 1px 3px rgba(0, 0, 0, 1);
     background:
-        linear-gradient(rgba(240,248,255,0.05), rgba(255,255,255,0.08)),
+        linear-gradient(
+            45deg,
+            rgba(248, 246, 240, 0.15) 0%,
+            rgba(201, 170, 136, 0.08) 50%,
+            rgba(139, 90, 60, 0.05) 100%
+        ),
         url('https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80&v=2024042401');
     background-attachment: fixed;
     background-size: cover;
@@ -366,16 +371,14 @@ a:hover {
     padding: 80px 0;
     max-width: 1200px;
     margin: 0 auto;
-    background:
-        linear-gradient(135deg,
-            rgba(255, 255, 255, 0.15),
-            rgba(240, 248, 255, 0.08));
-    border-radius: 25px;
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(248, 246, 240, 0.92);
+    border-radius: 30px;
+    backdrop-filter: blur(12px) saturate(1.1);
+    border: 1px solid rgba(201, 170, 136, 0.25);
     box-shadow:
-        0 16px 50px rgba(0, 0, 0, 0.08),
-        inset 0 2px 0 rgba(255, 255, 255, 0.3);
+        0 20px 60px rgba(139, 90, 60, 0.06),
+        0 8px 24px rgba(139, 90, 60, 0.04),
+        inset 0 2px 0 rgba(255, 255, 255, 0.7);
 }
 
 /* MAXIMUM TEXT READABILITY SECTIONS */
@@ -620,42 +623,43 @@ button:focus, .button:focus, input[type="submit"]:focus,
     }
 }
 
-/* ENHANCED TEXT READABILITY FOR TEACHER & BLOG CONTENT */
+/* BEAUTIFUL EARTH-TONE READABILITY FOR TEACHER & BLOG CONTENT */
 .teacher-profile, .teacher-info, .teacher-photo,
 .blog-post, .post-content, .post-meta,
 .qualifications, .specializations, .specialization,
 blockquote, .page-header {
-    color: #FFFFFF !important;
-    text-shadow:
-        2px 2px 0px rgba(0, 0, 0, 1),
-        3px 3px 6px rgba(0, 0, 0, 0.95),
-        0px 0px 15px rgba(0, 0, 0, 0.8),
-        1px 1px 3px rgba(0, 0, 0, 1) !important;
+    color: #2C4A3A !important;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+.teacher-subtitle, .post-meta, .post-date {
+    color: #8B5A3C !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9) !important;
+    background: rgba(201, 170, 136, 0.15);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
 }
 
 .teacher-info p, .teacher-info li,
 .blog-post p, .blog-post li,
 .post-content p, .post-content li,
 .qualifications li, .specialization p {
-    color: #FFFFFF !important;
+    color: #2C4A3A !important;
     font-weight: 600 !important;
-    text-shadow:
-        2px 2px 0px rgba(0, 0, 0, 1),
-        3px 3px 6px rgba(0, 0, 0, 0.95),
-        0px 0px 15px rgba(0, 0, 0, 0.8),
-        1px 1px 3px rgba(0, 0, 0, 1) !important;
-    background:
-        linear-gradient(135deg,
-            rgba(255, 255, 255, 0.25),
-            rgba(255, 255, 255, 0.1));
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 15px 20px;
-    border-radius: 15px;
-    margin: 12px 0;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    background: rgba(248, 246, 240, 0.95);
+    backdrop-filter: blur(12px) saturate(1.1);
+    border: 1px solid rgba(201, 170, 136, 0.25);
+    padding: 2rem 2.5rem;
+    border-radius: 24px;
+    margin: 1.5rem 0;
     box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        0 8px 32px rgba(139, 90, 60, 0.08),
+        0 2px 8px rgba(139, 90, 60, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
 }
 
 .teacher-subtitle, .post-meta, .post-date {
@@ -668,44 +672,47 @@ blockquote, .page-header {
 }
 
 blockquote p {
-    background:
-        linear-gradient(135deg,
-            rgba(173, 216, 230, 0.3),
-            rgba(135, 206, 250, 0.2)) !important;
-    backdrop-filter: blur(15px);
-    border-left: 4px solid #87CEEB;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 20px 25px !important;
-    margin: 20px 0 !important;
-    border-radius: 0 15px 15px 0;
+    background: rgba(245, 213, 208, 0.9) !important;
+    backdrop-filter: blur(8px) saturate(1.2);
+    border-left: 5px solid #C9AA88;
+    border: 1px solid rgba(201, 170, 136, 0.3);
+    padding: 2.5rem 3rem !important;
+    margin: 2rem 0 !important;
+    border-radius: 0 20px 20px 0;
     font-style: italic;
+    color: #1A4B3A !important;
+    font-size: 1.1rem;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
     box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        0 8px 32px rgba(139, 90, 60, 0.08),
+        0 2px 8px rgba(139, 90, 60, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .qualifications ul, .specializations {
-    background:
-        linear-gradient(135deg,
-            rgba(240, 248, 255, 0.2),
-            rgba(230, 238, 250, 0.15));
-    backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    padding: 25px 30px;
-    border-radius: 20px;
-    margin: 20px 0;
+    background: rgba(248, 246, 240, 0.97);
+    backdrop-filter: blur(15px) saturate(1.1);
+    border: 1px solid rgba(201, 170, 136, 0.3);
+    padding: 3rem;
+    border-radius: 24px;
+    margin: 2rem 0;
     box-shadow:
-        0 12px 40px rgba(0, 0, 0, 0.08),
-        inset 0 2px 0 rgba(255, 255, 255, 0.4);
+        0 20px 40px rgba(139, 90, 60, 0.06),
+        0 8px 16px rgba(139, 90, 60, 0.04),
+        inset 0 2px 0 rgba(255, 255, 255, 0.7);
 }
 
 .qualifications h4, .specialization h4 {
-    color: #4682B4 !important;
-    text-shadow:
-        2px 2px 0px rgba(255, 255, 255, 0.8),
-        0px 0px 12px rgba(70, 130, 180, 0.6) !important;
-    margin-bottom: 20px;
-    font-size: 1.3rem;
+    color: #8B5A3C !important;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background: rgba(201, 170, 136, 0.2);
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(201, 170, 136, 0.3);
+    display: inline-block;
 }
 
 /* MOBILE-SPECIFIC ENHANCEMENTS */
